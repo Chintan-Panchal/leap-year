@@ -1,6 +1,7 @@
 package com.excel;
 
 import static org.junit.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -27,9 +28,33 @@ public class LeapYearTest {
     }
 
     @Test
-    public void test2000IsLeapYear() {
+    public void test2000IsALeapYear() {
         boolean result = leapYear.isLeapYear(2000);
         assertTrue(result);
     }
+
+    @Test
+    public void test2001IsNotALeapYear() {
+        boolean result = leapYear.isLeapYear(2001);
+        assertFalse(result);
+    }
+
+    @Test
+    public void test1700IsNotALeapYear() {
+        boolean result = leapYear.isLeapYear(1700);
+        assertFalse(result);
+    }
+
+    @Test
+    public void test2100IsNotALeapYear() {
+        boolean result = leapYear.isLeapYear(2100);
+        assertFalse(result);
+    }
+
+    //    @Test
+    //    public void test2008IsALeapYear() {
+    //        boolean result = leapYear.isLeapYear(2008);
+    //        assertTrue(result);
+    //    }
 
 }
