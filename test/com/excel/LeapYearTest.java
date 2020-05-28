@@ -51,10 +51,10 @@ public class LeapYearTest {
         assertFalse(result);
     }
 
-    //    @Test
-    //    public void test2008IsALeapYear() {
-    //        boolean result = leapYear.isLeapYear(2008);
-    //        assertTrue(result);
-    //    }
+    @Test
+    public void test2008IsALeapYear() {
+        boolean result = leapYear.isLeapYear(2008);
+        assertTrue(result);
+    }
 
 }
